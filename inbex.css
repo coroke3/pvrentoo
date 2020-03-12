@@ -1,0 +1,390 @@
+#loader-bg {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: #000;
+    z-index: 1;
+}
+
+#loader {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #222222;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.video-wrap {
+    position: relative;
+}
+
+p {
+    font-family: serif;
+    color: #fff;
+    font-size: 400%;
+    position: absolute;
+    left: 30%;
+    top: 200px;
+    z-index: 1;
+}
+
+.yotei {
+    width: 100%;
+}
+
+.rogo {
+    width: 50%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.yohaku {
+    padding: 30px;
+    padding-left: 350px;
+    padding-right: 350px;
+
+}
+
+@media screen and (max-width: 1024px) {
+    .rogo {
+        width: 75%;
+        height: 75%;
+    }
+
+    .yohaku {
+        padding: 30px;
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+}
+
+@media screen and (max-width: 896px) {
+    .rogo {
+        width: 85%;
+        height: 85%;
+    }
+
+    .yohaku {
+        padding: 30px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .rogo {
+        width: 100%;
+        height: 100%;
+    }
+
+    .yohaku {
+        padding: 0px;
+    }
+}
+
+
+
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+    height: auto;
+    font-weight: 900;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    height: auto;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+#spring {
+    background-color: #222222;
+    padding: 300px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+}
+
+#main {
+    background-color: #222222;
+    padding: 300px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+}
+
+#kako {
+    background-color: #222222;
+    padding: 300px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+body {
+    margin: 0px;
+    padding: 0;
+}
+
+.you {
+    padding-left: 10px;
+    width: 512px;
+    height: 288px;
+}
+
+.kakorogo {
+    margin-left: 10px;
+
+    width: 480px;
+    height: 270px;
+    border: 9px solid #c0c0c0;
+    border-radius: 30px;
+
+}
+
+#menber {
+    background-color: #222222;
+    padding: 300px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#sns {
+    background-color: #222222;
+    padding: 300px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.fab fa-twitter {
+    margin: 0px;
+    padding: 0px;
+}
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 38px;
+        color: #ffffff;
+        height: auto;
+    }
+
+    a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 23px;
+        color: #ffffff;
+        height: auto;
+    }
+
+    #spring {
+        padding: 60px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+
+    }
+
+    #main {
+
+        padding: 60px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+
+    }
+
+    #kako {
+
+        padding: 60px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    #menber {
+
+        padding: 60px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    #sns {
+
+        padding: 60px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .you {
+        padding-left: 10px;
+        width: 90%;
+        height: 90%;
+    }
+
+    .kakorogo {
+        margin-left: 10px;
+
+        width: 90%;
+        height: 90%;
+        border: 9px solid #c0c0c0;
+        border-radius: 30px;
+    }
+}
+
+@media screen and (max-width: 896px) {
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 35px;
+        color: #ffffff;
+        height: auto;
+    }
+
+    a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        color: #ffffff;
+        height: auto;
+    }
+
+    #spring {
+        padding: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+
+    }
+
+    #main {
+
+        padding: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+
+    }
+
+    #kako {
+
+        padding: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    #menber {
+
+        padding: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    #sns {
+
+        padding: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .you {
+        padding-left: 10px;
+        width: 90%;
+        height: 90%;
+    }
+
+    .kakorogo {
+        margin-left: 10px;
+
+        width: 90%;
+        height: 90%;
+        border: 9px solid #c0c0c0;
+        border-radius: 30px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 30px;
+        color: #ffffff;
+        height: auto;
+    }
+
+    a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        color: #ffffff;
+        height: auto;
+    }
+
+    #spring {
+
+        padding: 25px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+
+    }
+
+    #main {
+
+        padding: 25px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+
+    }
+
+    #kako {
+
+        padding: 25px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    #menber {
+
+        padding: 25px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    #sns {
+
+        padding: 25px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .you {
+        padding-left: 10px;
+        width: 90%;
+        height: 90%;
+    }
+
+    .kakorogo {
+        margin-left: 10px;
+
+        width: 90%;
+        height: 90%;
+        border: 9px solid #c0c0c0;
+        border-radius: 30px;
+    }
+}
