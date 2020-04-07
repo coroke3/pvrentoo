@@ -7,6 +7,8 @@
     <title>PV連続投稿企画委員会</title>
     <link rel="stylesheet" href="inbex.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css" type="text/css" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/web.ico" type="image/vnd.microsoft.icon">
     <center>
@@ -23,79 +25,88 @@
 
 
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('.slider').bxSlider({
-                auto: true,
-                pause: 2000,
+        $(function() {
+            //loadされたらブラウザの縦幅を取ってきて.headerに効かせる
+            $(window).on('load', function() {
+                var heght = $(window).height();
+                $('.header').css('height', heght + 'px');
+            });
+        });
+        $(function() {
+            var slide = $('.slide');
+            var slide_one = $('.slide>li');
+            var slide_one_first = $('.slide li:first-child');
+
+
+            // .slide>liの数を取得しimgをbackgroundにする
+            //  slide_one.lengthで.slide>liの数を取得。liが増えても大丈夫
+            var all_li = slide_one.length;
+
+            //新しい配列を作る
+            var img_all = new Array;
+            for (var i = 0; i <= all_li; i++) {
+
+                //.slide>liの中にあるimgをそれぞれ取得
+                var slide_img = slide_one.eq(i).find('img');
+                //imgのsrcを配列に格納
+                img_all[i] = slide_img.attr('src');
+
+                //それぞれの.slide>liにimgをbackgroundとして効かせる
+                slide_one.eq(i).css('background-image', 'url(' + img_all[i] + ')');
+            }
+
+            //スライド
+            $(window).on('load', function() {
+
+                var fadeSpeed = 1000;
+                // 切り替わりの間隔（ミリ秒）
+                var switchDelay = 0500;
+                //  フェード処理の早さ（ミリ秒）
+
+                //  .slide li:first-childにactiveというclassをつけてshowする
+                //  ※cssで予めslide liにはdisplay:noneが掛かっている
+                slide_one_first.addClass('active').show();
+
+                setInterval(function() {
+                    var active = $('.slide  li.active');
+                    //条件演算子を使って、.slide  li.activeの次にliがあるならそれを指定(true)、
+                    //ないなら.slide  li:firstを指定(false)
+                    var next = active.next('li').length ? active.next('li') : $('.slide  li:first');
+
+                    //activeをfadeOutして、nextをfadeInする
+                    active.fadeOut(switchDelay).removeClass('active');
+                    next.fadeIn(switchDelay).addClass('active');
+                }, fadeSpeed);
             });
         });
 
     </script>
-
-</head>
-
-<body>
-    <!--
-    運営　サイト制作　Mochi　@coroke3
-    ></-->
-
-
-
-    <header>
-        <center>
-
-
-
-            <img src="img/rogo.png" class="rogo">
-            <a href="#spring">
-                <img src="img/sp.jpg" class="rogo"></a>
-        </center>
-        <div class="yohaku">
-            <div class="slider">
-                <img src="img/SlideX.png" alt="">
-                <img src="img/Slide1.png" alt="">
-                <img src="img/Slide2.png" alt="">
-                <img src="img/Slide3.png" alt="">
-                <img src="img/Slide4.png" alt="">
-                <img src="img/Slide5.png" alt="">
-                <img src="img/Slide6.png" alt="">
-                <img src="img/Slide7.png" alt="">
-                <img src="img/Slide8.png" alt="">
-                <img src="img/Slide9.png" alt="">
-                <img src="img/Slide10.png" alt="">
-                <img src="img/Slide11.png" alt="">
-                <img src="img/Slide12.png" alt="">
-
-            </div>
-        </div>
-
-        <center>
-            <a>過去企画の各作品の静止画</a>
-        </center>
+    <header class="header">
+        <ul class="slide">
+            <li><img src="img/Slide1.png" alt=""></li>
+            <li><img src="img/Slide2.png" alt=""></li>
+            <li><img src="img/Slide3.png" alt=""></li>
+            <li><img src="img/Slide4.png" alt=""></li>
+            <li><img src="img/Slide5.png" alt=""></li>
+            <li><img src="img/Slide6.png" alt=""></li>
+            <li><img src="img/Slide7.png" alt=""></li>
+            <li><img src="img/Slide8.png" alt=""></li>
+            <li><img src="img/Slide9.png" alt=""></li>
+            <li><img src="img/Slide10.png" alt=""></li>
+            <li><img src="img/Slide11.png" alt=""></li>
+            <li><img src="img/Slide12.png" alt=""></li>
+        </ul>
 
     </header>
+    <main class="demo_main">
 
+
+    </main>
     <section class="spring" id="spring">
-        <h1>参加者募集中！</h1>
-        <a>この度は「第一回春のPV連続投稿祭」を開催します。<br>スマホ編集の方から、AfterEffectsをお使いの方まで、幅広い方、ジャンルで参加可能です。<br><br>ぜひご参加ください！！<br><br>
-            日程：2020 3/30 18:00 ～ 4/1 23:59<br><br>まとめ動画公開：4/2 20:30より「PV連続投稿企画【公式】」にてプレミア公開</a><br>
-        <br><a>↓詳しくはHPから↓</a><br><br>
-        <a href="https://springpv.open-w.net/index.html">
-            <img src="img/spring.png" class="kakorogo">
-        </a>
-        <h1><br>連投合作　開催のお知らせ</h1>
-        <a>この度、新型コロナウイルスによる休校に伴い、急遽新企画「第一回連投合作」を行います。</a>
+        <h1>準備中...</h1>
+        <a>次回は8月頃の開催を予定しています。5月下旬ごろにお知らせします。</a>
 
-        <a><br>・課題曲　表裏一体　すりぃ
-            <img src="img/retoga.jpg" class="yotei">
-            <h2>参加方法・日程</h2>
 
-            <a>参加希望の方は公式TwitterにDMをお願いします。そこで詳しいご案内をさせていただきます。
-                <br>
-                <br>3/2　告知
-                <br>3/4　募集終了
-                <br>3/23 締め切り</a>
-        </a>
     </section>
 
     <section class="main" id="main">
@@ -106,7 +117,15 @@
     </section>
 
     <section class="kako" id="kako">
-        <h1>過去企画</h1>
+        <div class="kohaku1">
+            <h1>過去企画</h1>
+            <a href="https://springpv.open-w.net/index.html">
+                <img src="img/spring.png" class="kakorogo">
+            </a>
+            <iframe src="https://www.youtube.com/embed/F7BaXhWzL7M" class="you" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <br>
+        <br>
         <div class="kohaku1">
             <a href="http://pvkohaku.xxxxxxxx.jp/">
                 <img src="img/pv%20kohaku1.jpg" class="kakorogo">
@@ -142,6 +161,6 @@
     </section>
 
 
-</body>
+    </body>
 
 </html>

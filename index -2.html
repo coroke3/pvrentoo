@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=shift-jis" />
+<title>画面サイズに合わせて高さを指定する3つの方法</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+ 
+<style> 
+html, body { height: 100%; }
+body {
+position:relative;
+  margin: 0;
+  padding: 0;
+  font: 12px/100% 'Acme', sans-serif;
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+h2 { margin: 0 0 30px; font-size: 48px; font-family: 'Open Sans', sans-serif; letter-spacing: -2px; }
+a, a:visited { color: #fff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.cover { position: relative; width: 100%; margin: 0; padding: 0; color: #fff; }
+
+.centerBox { position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; width: 50%; height: 50px; text-align: center; }
+
+.section1 { background: url(img/big-sky-img1.jpg) no-repeat fixed; background-size: cover; }
+.section2 { height: 100%; background: #fff; color: #009688; }
+.section3 { height: 100vh; background: url(img/big-sky-img2.jpg); background-size: cover; }
+.section4 { height: 100%; background: #009688; }
+.section5 { height: 100%; background: url(img/big-sky-img3.jpg) no-repeat fixed; background-size: cover; }
+
+</style>
+
+
+<div class="cover section1">
+  <div class="centerBox">
+    <h2>Section1</h2>
+    <p>最初は jQuery で高さを指定しています</p>
+  </div>
+</div>
+
+<div class="cover section2">
+  <div class="centerBox">
+    <h2>Section2</h2>
+    <p>次は height: 100%; で高さを指定しています</p>
+  </div>
+</div>
+
+<div class="cover section3">
+  <div class="centerBox">
+    <h2>Section3</h2>
+    <p>その次は height: 100vh で高さを指定しています</p>
+  </div>
+</div>
+<div class="cover section4">
+  <div class="centerBox">
+    <h2>Section4</h2>
+    <p>IE8以下を除き、すべて同じようになっていると思います</p>
+  </div>
+</div>
+<div class="cover section5">
+  <div class="centerBox">
+    <h2>Section5</h2>
+    <p>おしまい</p>
+    <p style="padding: 10px;"><a href="http://weboook.blog22.fc2.com/blog-entry-411.html">記事に戻る</a></p>
+  </div>
+</div>
+
+
+
+<script>
+$(document).ready(function () {
+  hsize = $(window).height();
+  $(".section1").css("height", hsize + "px");
+});
+$(window).resize(function () {
+  hsize = $(window).height();
+  $(".section1").css("height", hsize + "px");
+});
+</script>
+
+
+</body>
+</html>
