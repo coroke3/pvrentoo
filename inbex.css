@@ -72,6 +72,10 @@ ul {
     text-align: center;
 }
 
+howa {
+    color: #ffffff;
+}
+
 #slide {
     width: 640px;
     height: 300px;
@@ -313,7 +317,7 @@ body {
 }
 
 #menber {
-    background-color: #ffffff;
+    background-color: #323232;
     padding: 300px;
     padding-bottom: 10px;
     padding-top: 10px;
