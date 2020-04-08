@@ -261,6 +261,8 @@ a {
     height: auto;
     text-decoration: none;
     font-weight: 700;
+    line-height: 140%;
+
 }
 
 #spring {
@@ -312,6 +314,8 @@ body {
     padding: 300px;
     padding-bottom: 10px;
     padding-top: 10px;
+    line-height: 140%;
+
 }
 
 #sns {
