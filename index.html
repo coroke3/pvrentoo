@@ -11,9 +11,6 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/web.ico" type="image/vnd.microsoft.icon">
-    <center>
-
-    </center>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
@@ -23,7 +20,6 @@
     <meta property="og:title" content="pvrentoo.netlify.com" />
     <meta property="og:description" content="春のPV連続投稿祭、紅白PV連続投稿合作などの実行委員会のオフィシャルサイトです。" />
     <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
-    <script type="text/javascript" src="function.js"></script>
 
 
 
@@ -84,12 +80,73 @@
         });
 
     </script>
-    <div id="loader-bg">
+    <script src="/js/jquery-2.1.1.min.js"></script>
+    <script>
+        $(function() {
+            var h = $(window).height();
+            $('#loading__wrapper').css('display', 'none');
+            $('#is-loading ,#loading').height(h).css('display', 'block');
+        });
+
+        $(window).load(function() {
+            $('#is-loading').delay(900).fadeOut(800);
+            $('#loading').delay(600).fadeOut(300);
+            $('#loading__wrapper').css('display', 'block');
+        });
+
+
+        $(function() {
+            setTimeout('stopload()', 10000);
+        });
+
+        function stopload() {
+            $('#loading__wrapper').css('display', 'block');
+            $('#is-loading').delay(900).fadeOut(800);
+            $('#loading').delay(600).fadeOut(300);
+        }
+
+    </script>
+    <style>
+        #is-loading {
+            display: block;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            background: #FFF;
+            z-index: 8;
+        }
+
+        #loading {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            margin-top: -100px;
+            margin-left: -100px;
+            text-align: center;
+            color: #fff;
+            z-index: 9;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="is-loading">
         <div id="loading">
-            <img src="img/loading.gif">
+            <center>
+                <img src="img/loading.gif" alt="loadingなう" />
+            </center>
         </div>
     </div>
-    <div id="contents">
+
+    <div id="loading__wrapper">
+
         <header class="header">
 
             <ul class="slide">
@@ -235,6 +292,6 @@
         </section>
 
     </div>
-</head>
+</body>
 
 </html>
