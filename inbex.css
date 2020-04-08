@@ -207,49 +207,44 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
-    .rogo {
-        width: 75%;
-        height: 75%;
-    }
+    .mrogo {
+        position: absolute;
+        text-align: center;
+        width: 70%;
+        top: -100px;
+        left: 0%;
 
-    .yohaku {
-        padding: 30px;
-        padding-left: 150px;
-        padding-right: 150px;
     }
 }
 
 @media screen and (max-width: 896px) {
-    .rogo {
-        width: 85%;
-        height: 85%;
-    }
+    .mrogo {
+        position: absolute;
+        text-align: center;
+        width: 80%;
+        top: -100px;
+        left: 0%;
 
-    .yohaku {
-        padding: 30px;
-        padding-left: 100px;
-        padding-right: 100px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .rogo {
-        width: 100%;
-        height: 100%;
-    }
+    .mrogo {
+        position: absolute;
+        text-align: center;
+        width: 90%;
+        top: -100px;
+        left: 0%;
 
-    .yohaku {
-        padding: 0px;
     }
 }
-
 
 
 
 h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
-    color: #ffffff;
+    color: #000000;
     height: auto;
     font-weight: 900;
 }
@@ -257,7 +252,7 @@ h1 {
 a {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    color: #ffffff;
+    color: #000000;
     height: auto;
     text-decoration: none;
     font-weight: 700;
@@ -266,7 +261,7 @@ a {
 }
 
 #spring {
-    background-color: #222222;
+    background-color: #ffffff;
     padding: 300px;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -274,7 +269,7 @@ a {
 }
 
 #main {
-    background-color: #222222;
+    background-color: #ffffff;
     padding: 300px;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -282,7 +277,7 @@ a {
 }
 
 #kako {
-    background-color: #222222;
+    background-color: #ffffff;
     padding: 300px;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -310,7 +305,7 @@ body {
 }
 
 #menber {
-    background-color: #222222;
+    background-color: #ffffff;
     padding: 300px;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -319,7 +314,7 @@ body {
 }
 
 #sns {
-    background-color: #222222;
+    background-color: #ffffff;
     padding: 300px;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -334,14 +329,14 @@ body {
     h1 {
         font-family: 'Roboto', sans-serif;
         font-size: 38px;
-        color: #ffffff;
+
         height: auto;
     }
 
     a {
         font-family: 'Roboto', sans-serif;
         font-size: 23px;
-        color: #ffffff;
+
         height: auto;
     }
 
@@ -383,8 +378,9 @@ body {
 
     .you {
         padding-left: 10px;
-        width: 90%;
-        height: 90%;
+        width: 92%;
+        height: 400px;
+
     }
 
     .kakorogo {
@@ -401,14 +397,14 @@ body {
     h1 {
         font-family: 'Roboto', sans-serif;
         font-size: 35px;
-        color: #ffffff;
+
         height: auto;
     }
 
     a {
         font-family: 'Roboto', sans-serif;
         font-size: 20px;
-        color: #ffffff;
+
         height: auto;
     }
 
@@ -450,7 +446,7 @@ body {
 
     .you {
         padding-left: 10px;
-        width: 90%;
+        width: 93%;
         height: 90%;
     }
 
@@ -469,14 +465,14 @@ body {
     h1 {
         font-family: 'Roboto', sans-serif;
         font-size: 30px;
-        color: #ffffff;
+
         height: auto;
     }
 
     a {
         font-family: 'Roboto', sans-serif;
         font-size: 15px;
-        color: #ffffff;
+
         height: auto;
     }
 
@@ -519,7 +515,7 @@ body {
 
     .you {
         padding-left: 10px;
-        width: 90%;
+        width: 93%;
         height: 90%;
     }
 
