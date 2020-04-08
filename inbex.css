@@ -260,11 +260,12 @@ a {
 
 }
 
-#spring {
-    background-color: #ffffff;
+#summer {
+    background-color: #8db1ff;
     padding: 300px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     padding-top: 10px;
+
 
 }
 
@@ -276,8 +277,15 @@ a {
 
 }
 
-#kako {
-    background-color: #ffffff;
+#kakos {
+    background-color: #fbfd98;
+    padding: 300px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#kakoh {
+    background-color: #ffa291;
     padding: 300px;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -340,7 +348,7 @@ body {
         height: auto;
     }
 
-    #spring {
+    #summer {
         padding: 60px;
         padding-bottom: 10px;
         padding-top: 10px;
@@ -355,7 +363,14 @@ body {
 
     }
 
-    #kako {
+    #kakos {
+
+        padding: 60px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    #kakoh {
 
         padding: 60px;
         padding-bottom: 10px;
@@ -408,7 +423,7 @@ body {
         height: auto;
     }
 
-    #spring {
+    #summer {
         padding: 40px;
         padding-bottom: 10px;
         padding-top: 10px;
@@ -423,12 +438,20 @@ body {
 
     }
 
-    #kako {
+    #kakos {
 
         padding: 40px;
         padding-bottom: 10px;
         padding-top: 10px;
     }
+
+    #kakoh {
+
+        padding: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
 
     #menber {
 
@@ -476,7 +499,7 @@ body {
         height: auto;
     }
 
-    #spring {
+    #summer {
 
         padding: 25px;
         padding-bottom: 10px;
@@ -492,7 +515,14 @@ body {
 
     }
 
-    #kako {
+    #kakos {
+
+        padding: 25px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    #kakoh {
 
         padding: 25px;
         padding-bottom: 10px;
