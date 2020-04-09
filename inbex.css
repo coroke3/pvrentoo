@@ -1,148 +1,3 @@
-.demo_main p {
-    text-align: center;
-    font-size: 20px;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.div1 {
-    height: 300px;
-    background: #ccc;
-}
-
-.div2 {
-    height: 300px;
-    background: #ddd;
-}
-
-.div3 {
-    height: 300px;
-    background: #fff;
-}
-
-
-.header {
-    position: relative;
-    text-align: center;
-    width: 100%;
-}
-
-
-
-.spinner {
-    width: 100px;
-    height: 100px;
-    margin: 200px auto;
-    background-color: #fff;
-    border-radius: 100%;
-    animation: sk-scaleout 1.0s infinite ease-in-out;
-}
-
-/* ローディングアニメーション */
-@keyframes sk-scaleout {
-    0% {
-        transform: scale(0);
-    }
-
-    100% {
-        transform: scale(1.0);
-        opacity: 0;
-    }
-}
-
-/* コンテンツ部分の装飾 */
-.gallery {
-    display: grid;
-    gap: .5rem;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-
-
-.header p {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    top: 50%;
-    left: 0;
-    bottom: 0;
-    font-size: 30px;
-    color: #fff;
-    z-index: 10;
-    text-align: center;
-}
-
-.header .slide {
-    position: absolute;
-    top: auto;
-    right: 0%;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    text-align: center;
-}
-
-.header .slide img {
-    visibility: hidden;
-    height: 0;
-    width: 0;
-    text-align: center;
-}
-
-.header .slide li {
-    position: absolute;
-    display: none;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-}
-
-howa {
-    color: #ffffff;
-}
-
-#slide {
-    width: 640px;
-    height: 300px;
-    margin: 0 auto;
-    position: relative;
-    text-align: center;
-}
-
-
-.centerBox {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-
-}
-
-.cover {
-    position: relative;
-
-    margin: 0;
-    padding: 0;
-
-}
-
-#slide img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    text-align: center;
-}
-
 #loader-bg {
     display: none;
     position: fixed;
@@ -152,7 +7,6 @@ howa {
     left: 0px;
     background: #000;
     z-index: 1;
-    text-align: center;
 }
 
 #loader {
@@ -167,13 +21,17 @@ howa {
     text-align: center;
     color: #fff;
     z-index: 2;
-    text-align: center;
 }
 
 html {
     margin: 0;
     padding: 0;
-    height: 100%;
+}
+
+header {
+    background-color: #222222;
+    padding-bottom: 0px;
+    padding-top: 0px;
 }
 
 .video-wrap {
@@ -194,35 +52,11 @@ p {
     width: 100%;
 }
 
-.drogo {
-    position: relative;
-}
-
-.mrogo {
-    position: absolute;
-    text-align: center;
-    width: 50%;
-    top: -100px;
-    left: 0%;
-
-}
-
-
-
 .rogo {
     width: 50%;
     height: 50%;
     margin: 0;
     padding: 0;
-}
-
-.sbox {
-    margin: 0;
-
-}
-
-.her {
-    height: 100%;
 }
 
 .yohaku {
@@ -232,94 +66,80 @@ p {
 
 }
 
-body {
-
-    margin: 0;
-    padding: 0;
-    font: 12px/100% 'Acme', sans-serif;
-    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-}
-
 @media screen and (max-width: 1024px) {
-    .mrogo {
-        position: absolute;
-        text-align: center;
-        width: 70%;
-        top: -100px;
-        left: 0%;
+    .rogo {
+        width: 75%;
+        height: 75%;
+    }
 
+    .yohaku {
+        padding: 30px;
+        padding-left: 150px;
+        padding-right: 150px;
     }
 }
 
 @media screen and (max-width: 896px) {
-    .mrogo {
-        position: absolute;
-        text-align: center;
-        width: 80%;
-        top: -100px;
-        left: 0%;
+    .rogo {
+        width: 85%;
+        height: 85%;
+    }
 
+    .yohaku {
+        padding: 30px;
+        padding-left: 100px;
+        padding-right: 100px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .mrogo {
-        position: absolute;
-        text-align: center;
-        width: 90%;
-        top: -100px;
-        left: 0%;
+    .rogo {
+        width: 100%;
+        height: 100%;
+    }
 
+    .yohaku {
+        padding: 0px;
     }
 }
 
 
 
+
 h1 {
-    font-family: 'Roboto', sans-serif, 'arial';
+    font-family: 'Roboto', sans-serif;
     font-size: 40px;
-    color: #000000;
+    color: #ffffff;
     height: auto;
     font-weight: 900;
 }
 
 a {
-    font-family: 'Roboto', sans-serif, 'arial';
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    color: #000000;
+    color: #ffffff;
     height: auto;
-    text-decoration: none;
     font-weight: 700;
-    line-height: 140%;
-
 }
 
-#summer {
-    background-color: #8db1ff;
+#spring {
+    background-color: #222222;
     padding: 300px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     padding-top: 10px;
-
 
 }
 
 #main {
-    background-color: #ffffff;
+    background-color: #222222;
     padding: 300px;
     padding-bottom: 10px;
     padding-top: 10px;
 
 }
 
-#kakos {
-    background-color: #fbfd98;
-    padding: 300px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-}
-
-#kakoh {
-    background-color: #ffa291;
+#kako {
+    background-color: #222222;
     padding: 300px;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -347,16 +167,14 @@ body {
 }
 
 #menber {
-    background-color: #323232;
+    background-color: #222222;
     padding: 300px;
     padding-bottom: 10px;
     padding-top: 10px;
-    line-height: 140%;
-
 }
 
 #sns {
-    background-color: #ffffff;
+    background-color: #222222;
     padding: 300px;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -371,18 +189,18 @@ body {
     h1 {
         font-family: 'Roboto', sans-serif;
         font-size: 38px;
-
+        color: #ffffff;
         height: auto;
     }
 
     a {
         font-family: 'Roboto', sans-serif;
         font-size: 23px;
-
+        color: #ffffff;
         height: auto;
     }
 
-    #summer {
+    #spring {
         padding: 60px;
         padding-bottom: 10px;
         padding-top: 10px;
@@ -397,14 +215,7 @@ body {
 
     }
 
-    #kakos {
-
-        padding: 60px;
-        padding-bottom: 10px;
-        padding-top: 10px;
-    }
-
-    #kakoh {
+    #kako {
 
         padding: 60px;
         padding-bottom: 10px;
@@ -427,9 +238,8 @@ body {
 
     .you {
         padding-left: 10px;
-        width: 92%;
-        height: 400px;
-
+        width: 90%;
+        height: 90%;
     }
 
     .kakorogo {
@@ -446,18 +256,18 @@ body {
     h1 {
         font-family: 'Roboto', sans-serif;
         font-size: 35px;
-
+        color: #ffffff;
         height: auto;
     }
 
     a {
         font-family: 'Roboto', sans-serif;
         font-size: 20px;
-
+        color: #ffffff;
         height: auto;
     }
 
-    #summer {
+    #spring {
         padding: 40px;
         padding-bottom: 10px;
         padding-top: 10px;
@@ -472,20 +282,12 @@ body {
 
     }
 
-    #kakos {
+    #kako {
 
         padding: 40px;
         padding-bottom: 10px;
         padding-top: 10px;
     }
-
-    #kakoh {
-
-        padding: 40px;
-        padding-bottom: 10px;
-        padding-top: 10px;
-    }
-
 
     #menber {
 
@@ -503,7 +305,7 @@ body {
 
     .you {
         padding-left: 10px;
-        width: 93%;
+        width: 90%;
         height: 90%;
     }
 
@@ -522,18 +324,18 @@ body {
     h1 {
         font-family: 'Roboto', sans-serif;
         font-size: 30px;
-
+        color: #ffffff;
         height: auto;
     }
 
     a {
         font-family: 'Roboto', sans-serif;
         font-size: 15px;
-
+        color: #ffffff;
         height: auto;
     }
 
-    #summer {
+    #spring {
 
         padding: 25px;
         padding-bottom: 10px;
@@ -549,14 +351,7 @@ body {
 
     }
 
-    #kakos {
-
-        padding: 25px;
-        padding-bottom: 10px;
-        padding-top: 10px;
-    }
-
-    #kakoh {
+    #kako {
 
         padding: 25px;
         padding-bottom: 10px;
@@ -579,7 +374,7 @@ body {
 
     .you {
         padding-left: 10px;
-        width: 93%;
+        width: 90%;
         height: 90%;
     }
 
