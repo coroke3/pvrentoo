@@ -7,58 +7,230 @@
     <title>PV連続投稿企画委員会</title>
     <link rel="stylesheet" href="inbex.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css" type="text/css" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/web.ico" type="image/vnd.microsoft.icon">
-    <center>
-
-    </center>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@pv_rentoo" />
+    <meta property="og:url" content="springpv.open-w.net" />
+    <meta property="og:title" content="pvrentoo.netlify.com" />
+    <meta property="og:description" content="春のPV連続投稿祭、紅白PV連続投稿合作などの実行委員会のオフィシャルサイトです。" />
+    <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+
+
 
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('.slider').bxSlider({
-                auto: true,
-                pause: 2000,
+        $(function() {
+            //loadされたらブラウザの縦幅を取ってきて.headerに効かせる
+            $(window).on('load', function() {
+                var heght = $(window).height();
+                $('.header').css('height', heght + 'px');
+            });
+        });
+        $(function() {
+            var slide = $('.slide');
+            var slide_one = $('.slide>li');
+            var slide_one_first = $('.slide li:first-child');
+
+
+            // .slide>liの数を取得しimgをbackgroundにする
+            //  slide_one.lengthで.slide>liの数を取得。liが増えても大丈夫
+            var all_li = slide_one.length;
+
+            //新しい配列を作る
+            var img_all = new Array;
+            for (var i = 0; i <= all_li; i++) {
+
+                //.slide>liの中にあるimgをそれぞれ取得
+                var slide_img = slide_one.eq(i).find('img');
+                //imgのsrcを配列に格納
+                img_all[i] = slide_img.attr('src');
+
+                //それぞれの.slide>liにimgをbackgroundとして効かせる
+                slide_one.eq(i).css('background-image', 'url(' + img_all[i] + ')');
+            }
+
+            //スライド
+            $(window).on('load', function() {
+
+                var fadeSpeed = 2200;
+                // 切り替わりの間隔（ミリ秒）
+                var switchDelay = 0500;
+                //  フェード処理の早さ（ミリ秒）
+
+                //  .slide li:first-childにactiveというclassをつけてshowする
+                //  ※cssで予めslide liにはdisplay:noneが掛かっている
+                slide_one_first.addClass('active').show();
+
+                setInterval(function() {
+                    var active = $('.slide  li.active');
+                    //条件演算子を使って、.slide  li.activeの次にliがあるならそれを指定(true)、
+                    //ないなら.slide  li:firstを指定(false)
+                    var next = active.next('li').length ? active.next('li') : $('.slide  li:first');
+
+                    //activeをfadeOutして、nextをfadeInする
+                    active.fadeOut(switchDelay).removeClass('active');
+                    next.fadeIn(switchDelay).addClass('active');
+                }, fadeSpeed);
             });
         });
 
     </script>
 
+
 </head>
 
 <body>
-    <!--
-    運営　サイト制作　Mochi　@coroke3
-    ></-->
 
 
 
-    <header>
-        <center>
+    <header class="header">
+
+        <ul class="slide">
+            <li>
+                <a href="https://gyazo.com/37d7361fbc8f0b93ac193571857935e7"><img src="https://i.gyazo.com/37d7361fbc8f0b93ac193571857935e7.gif" alt="Image from Gyazo" width="960" /></a>
+            </li>
+            <li>
+                <a href="https://gyazo.com/35c8a9789f6c5c5c723afba871087f90"><img src="https://i.gyazo.com/35c8a9789f6c5c5c723afba871087f90.gif" alt="Image from Gyazo" width="960" /></a>
+            </li>
+            <li>
+                <a href="https://gyazo.com/591eae60cf5d7523635f38903756a0a6"><img src="https://i.gyazo.com/591eae60cf5d7523635f38903756a0a6.gif" alt="Image from Gyazo" width="960" /></a>
+            </li>
+            <li>
+                <a href="https://gyazo.com/663a1bb6c7623b566508021dfbd9770c"><img src="https://i.gyazo.com/663a1bb6c7623b566508021dfbd9770c.gif" alt="Image from Gyazo" width="960" /></a>
+            </li>
+            <li>
+                <a href="https://gyazo.com/50bfbbb8228eb6d08a560c440da9306c"><img src="https://i.gyazo.com/50bfbbb8228eb6d08a560c440da9306c.gif" alt="Image from Gyazo" width="960" /></a>
+            </li>
+            <li>
+                <a href="https://gyazo.com/dfe23221012222f1dfd9455ac48dace9"><img src="https://i.gyazo.com/dfe23221012222f1dfd9455ac48dace9.gif" alt="Image from Gyazo" width="960" /></a>
+            </li>
+            <li>
+                <a href="https://gyazo.com/85aa94ca6440bfe788bcccb9f1fd21ce"><img src="https://i.gyazo.com/85aa94ca6440bfe788bcccb9f1fd21ce.gif" alt="Image from Gyazo" width="960" /></a>
+            </li>
+            <li>
+                <a href="https://gyazo.com/e768f1054e32fdb0b4c563c7771d1dfd"><img src="https://i.gyazo.com/e768f1054e32fdb0b4c563c7771d1dfd.gif" alt="Image from Gyazo" width="960" /></a>
+            </li>
+            <li>
+                <a href="https://gyazo.com/e5d0309637113a9191e6e7b2180b3d9a"><img src="https://i.gyazo.com/e5d0309637113a9191e6e7b2180b3d9a.gif" alt="Image from Gyazo" width="960" /></a>
+            </li>
+            <li>
+                <a href="https://gyazo.com/fd60679580b288e634f9b2d63b46e697"><img src="https://i.gyazo.com/fd60679580b288e634f9b2d63b46e697.gif" alt="Image from Gyazo" width="960" /></a>
+            </li>
+            <li>
+                <a href="https://gyazo.com/83b4a0eaa38cfe136e79b61e0d21044c"><img src="https://i.gyazo.com/83b4a0eaa38cfe136e79b61e0d21044c.gif" alt="Image from Gyazo" width="960" /></a>
+            </li>
+            <li>
+                <a href="https://gyazo.com/37286eb0f7c7a202136f4e839c2845bc"><img src="https://i.gyazo.com/37286eb0f7c7a202136f4e839c2845bc.gif" alt="Image from Gyazo" width="960" /></a>
+            </li>
 
 
 
-            <img src="img/rogo.png" class="rogo">
-
-        </center>
 
 
-        <center>
-            <h1>サイトは移転しました。</h1><br>
-            <a href="https://pvrentoo.netlify.com/">
-                <h1>サイトはこちら</h1>
-            </a>
-        </center>
+
+        </ul>
+        <p>
+            <img src="img/rogo.png" class="mrogo">
+        </p>
 
     </header>
 
 
+    <section class="summer" id="summer">
+        <h1>
+            準備中...
+        </h1>
+        <a>
+            次回は8月頃の開催を予定しています。5月下旬ごろにお知らせします。
+        </a>
+
+
+    </section>
+
+    <section class="main" id="main">
+        <h1>どんな組織？</h1>
+        <a>私たちはPV作者間、映像制作者間の交流を目的とし、春、夏、冬にPV(映像)の連続投稿企画を行っています。</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>過去企画</h1>
+    </section>
+
+    <section class="kakos" id="kakos">
+        <div class="kohaku1">
+
+            <a href="https://springpv.netlify.com/">
+                <img src="img/spring.png" class="kakorogo">
+            </a>
+            <iframe src="https://www.youtube.com/embed/F7BaXhWzL7M" class="you" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <br>
+    </section>
+    <section class="kakoh" id=kakoh>
+        <br>
+
+        <div class="kohaku1">
+            <a href="https://pvkohaku.netlify.com/">
+                <img src="img/pv%20kohaku1.jpg" class="kakorogo">
+            </a>
+            <iframe src="https://www.youtube.com/embed/iKNdOfyh2o0?start=39" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" class="you" allowfullscreen></iframe>
+
+        </div>
+    </section>
+
+    <section class="menber" id="menber">
+        <h1>
+            実行委員
+        </h1>
+        <a><a href="https://twitter.com/coroke3">
+                ・Mochiもち（主催）
+            </a></a><br>
+
+        <a><a href="https://twitter.com/gakihure">
+                ・フレン
+            </a></a><br>
+        <a><a href="https://twitter.com/manjuuch3">
+                ・まんじゅうチャンネル
+            </a></a><br>
+        <a><a href="https://twitter.com/TN00b13">
+                ・th3_n00b13
+            </a></a><br>
+        <br>
+        <br><a>
+            2020春まで
+        </a><br>
+        <a><a href="https://twitter.com/hakua_loveEQ">
+                ・ハクアを博愛する
+            </a></a><br>
+        <a><a href="https://twitter.com/minatoo86/">
+                ・Minato86
+            </a></a><br>
+        <h1>
+            実行委員募集中！
+        </h1><br><a href="https://twitter.com/pv_rentoo/status/1212201981164445696?s=20">
+            <img src="img/jikkou.png" class="rogo">　詳しくは画像をクリック</a>
+
+
+    </section>
+    <section class="sns" id="sns">
+        <h1>公式SNS</h1>
+        <div>
+            <h1>
+                <a><a href="https://twitter.com/pv_rentoo" target="_blank">
+                        <i class="fab fa-twitter">　Twitter</i></a>
+                    <a href="https://bit.ly/375WdYW" target="_blank">
+                        <i class="fab fa-youtube">　YouTube</i></a></a></h1>
+        </div>
+
+    </section>
 
 </body>
 
 </html>
-<!--shinobi1-->
-<script type="text/javascript" src="//xa.shinobi.jp/ufo/189331100"></script><noscript><a href="//xa.shinobi.jp/bin/gg?189331100" target="_blank"><img src="//xa.shinobi.jp/bin/ll?189331100" border="0"></a><br><span style="font-size:9px"><img style="margin:0;vertical-align:text-bottom;" src="//img.shinobi.jp/tadaima/fj.gif" width="19" height="11"> </span></noscript>
-<!--shinobi2-->
