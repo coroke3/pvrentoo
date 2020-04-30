@@ -1,236 +1,210 @@
-<!doctype html>
-<html lang="ja">
-<meta name="viewport" content="width=device-width">
-
 <head>
-    <meta charset="UTF-8">
-    <title>PV連続投稿企画委員会</title>
-    <link rel="stylesheet" href="inbex.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,900&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
-    <link rel="stylesheet" href="css/reset.css" type="text/css" />
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="lity.min.css">
+    <script src="jquery.js"></script>
+    <script src="lity.min.js"></script>
+    <title>PV連投企画　OfficialSite</title>
     <link rel="shortcut icon" href="img/web.ico" type="image/vnd.microsoft.icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@pv_rentoo" />
-    <meta property="og:url" content="springpv.open-w.net" />
-    <meta property="og:title" content="pvrentoo.netlify.com" />
-    <meta property="og:description" content="春のPV連続投稿祭、紅白PV連続投稿合作などの実行委員会のオフィシャルサイトです。" />
-    <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
-
-
-
-    <script type="text/javascript">
+    <meta property="og:url" content="pvrentoo.netlify.com" />
+    <meta property="og:title" content="Mochi　officialsite" />
+    <meta property="og:description" content="PV連投企画のオフィシャルサイトです。" />
+    <meta property="og:image" content="img/rogo.png" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
         $(function() {
-            //loadされたらブラウザの縦幅を取ってきて.headerに効かせる
-            $(window).on('load', function() {
-                var heght = $(window).height();
-                $('.header').css('height', heght + 'px');
-            });
+            var h = $(window).height();
+
+            $('#wrap').css('display', 'none');
+            $('#loader-bg ,#loader').height(h).css('display', 'block');
         });
+
+        $(window).load(function() { //全ての読み込みが完了したら実行
+            $('#loader-bg').delay(900).fadeOut(800);
+            $('#loader').delay(600).fadeOut(300);
+            $('#wrap').css('display', 'block');
+        });
+
+        //10秒たったら強制的にロード画面を非表示
         $(function() {
-            var slide = $('.slide');
-            var slide_one = $('.slide>li');
-            var slide_one_first = $('.slide li:first-child');
-
-
-            // .slide>liの数を取得しimgをbackgroundにする
-            //  slide_one.lengthで.slide>liの数を取得。liが増えても大丈夫
-            var all_li = slide_one.length;
-
-            //新しい配列を作る
-            var img_all = new Array;
-            for (var i = 0; i <= all_li; i++) {
-
-                //.slide>liの中にあるimgをそれぞれ取得
-                var slide_img = slide_one.eq(i).find('img');
-                //imgのsrcを配列に格納
-                img_all[i] = slide_img.attr('src');
-
-                //それぞれの.slide>liにimgをbackgroundとして効かせる
-                slide_one.eq(i).css('background-image', 'url(' + img_all[i] + ')');
-            }
-
-            //スライド
-            $(window).on('load', function() {
-
-                var fadeSpeed = 2200;
-                // 切り替わりの間隔（ミリ秒）
-                var switchDelay = 0500;
-                //  フェード処理の早さ（ミリ秒）
-
-                //  .slide li:first-childにactiveというclassをつけてshowする
-                //  ※cssで予めslide liにはdisplay:noneが掛かっている
-                slide_one_first.addClass('active').show();
-
-                setInterval(function() {
-                    var active = $('.slide  li.active');
-                    //条件演算子を使って、.slide  li.activeの次にliがあるならそれを指定(true)、
-                    //ないなら.slide  li:firstを指定(false)
-                    var next = active.next('li').length ? active.next('li') : $('.slide  li:first');
-
-                    //activeをfadeOutして、nextをfadeInする
-                    active.fadeOut(switchDelay).removeClass('active');
-                    next.fadeIn(switchDelay).addClass('active');
-                }, fadeSpeed);
-            });
+            setTimeout('stopload()', 10000);
         });
+
+        function stopload() {
+            $('#wrap').css('display', 'block');
+            $('#loader-bg').delay(900).fadeOut(800);
+            $('#loader').delay(600).fadeOut(300);
+        }
 
     </script>
-
-
 </head>
 
 <body>
+    <div id="loader-bg">
+        <div id="loader">
+            <img src="img/black.svg" width=" 80" height="80" alt="Now Loading..." />
+        </div>
+    </div>
+    <div id="wrap">
+        <section class="top">
+            <center><img src="img/rogo.svg" class="rogo"> </center>
+            <center>
+                <p class="moji">PV連続投稿企画</p>
+            </center>
+        </section>
+        <section class="about">
 
-
-
-    <header class="header">
-
-        <ul class="slide">
-            <li>
-                <a href="https://gyazo.com/37d7361fbc8f0b93ac193571857935e7"><img src="https://i.gyazo.com/37d7361fbc8f0b93ac193571857935e7.gif" alt="Image from Gyazo" width="960" /></a>
-            </li>
-            <li>
-                <a href="https://gyazo.com/35c8a9789f6c5c5c723afba871087f90"><img src="https://i.gyazo.com/35c8a9789f6c5c5c723afba871087f90.gif" alt="Image from Gyazo" width="960" /></a>
-            </li>
-            <li>
-                <a href="https://gyazo.com/591eae60cf5d7523635f38903756a0a6"><img src="https://i.gyazo.com/591eae60cf5d7523635f38903756a0a6.gif" alt="Image from Gyazo" width="960" /></a>
-            </li>
-            <li>
-                <a href="https://gyazo.com/663a1bb6c7623b566508021dfbd9770c"><img src="https://i.gyazo.com/663a1bb6c7623b566508021dfbd9770c.gif" alt="Image from Gyazo" width="960" /></a>
-            </li>
-            <li>
-                <a href="https://gyazo.com/50bfbbb8228eb6d08a560c440da9306c"><img src="https://i.gyazo.com/50bfbbb8228eb6d08a560c440da9306c.gif" alt="Image from Gyazo" width="960" /></a>
-            </li>
-            <li>
-                <a href="https://gyazo.com/dfe23221012222f1dfd9455ac48dace9"><img src="https://i.gyazo.com/dfe23221012222f1dfd9455ac48dace9.gif" alt="Image from Gyazo" width="960" /></a>
-            </li>
-            <li>
-                <a href="https://gyazo.com/85aa94ca6440bfe788bcccb9f1fd21ce"><img src="https://i.gyazo.com/85aa94ca6440bfe788bcccb9f1fd21ce.gif" alt="Image from Gyazo" width="960" /></a>
-            </li>
-            <li>
-                <a href="https://gyazo.com/e768f1054e32fdb0b4c563c7771d1dfd"><img src="https://i.gyazo.com/e768f1054e32fdb0b4c563c7771d1dfd.gif" alt="Image from Gyazo" width="960" /></a>
-            </li>
-            <li>
-                <a href="https://gyazo.com/e5d0309637113a9191e6e7b2180b3d9a"><img src="https://i.gyazo.com/e5d0309637113a9191e6e7b2180b3d9a.gif" alt="Image from Gyazo" width="960" /></a>
-            </li>
-            <li>
-                <a href="https://gyazo.com/fd60679580b288e634f9b2d63b46e697"><img src="https://i.gyazo.com/fd60679580b288e634f9b2d63b46e697.gif" alt="Image from Gyazo" width="960" /></a>
-            </li>
-            <li>
-                <a href="https://gyazo.com/83b4a0eaa38cfe136e79b61e0d21044c"><img src="https://i.gyazo.com/83b4a0eaa38cfe136e79b61e0d21044c.gif" alt="Image from Gyazo" width="960" /></a>
-            </li>
-            <li>
-                <a href="https://gyazo.com/37286eb0f7c7a202136f4e839c2845bc"><img src="https://i.gyazo.com/37286eb0f7c7a202136f4e839c2845bc.gif" alt="Image from Gyazo" width="960" /></a>
-            </li>
-
-
-
-
-
-
-        </ul>
-        <p>
-            <img src="img/rogo.png" class="mrogo">
-        </p>
-
-    </header>
-
-
-    <section class="summer" id="summer">
-        <h1>
-            準備中...
-        </h1>
-        <a>
-            次回は8月頃の開催を予定しています。5月下旬ごろにお知らせします。
-        </a>
-
-
-    </section>
-
-    <section class="main" id="main">
-        <h1>どんな組織？</h1>
-        <a>私たちはPV作者間、映像制作者間の交流を目的とし、春、夏、冬にPV(映像)の連続投稿企画を行っています。</a>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h1>過去企画</h1>
-    </section>
-
-    <section class="kakos" id="kakos">
-        <div class="kohaku1">
+            <center>
+                <p1>公式SNS</p1>
+                <a href="https://twitter.com/pv_rentoo" class="twitter">
+                    <i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCBvhWOJ3sR3hBjO4xjq3aGQ" class="youtube">
+                    <i class="fab fa-youtube"></i></a>
+            </center>
+            <h1>お知らせ</h1>
+            <p>新型ウイルスの影響で、夏休みなどの休みが不明な状況のため、8月に開催を予定していた、「夏のPV連続投稿祭」は6月に前倒しする形で開催します。<br>日程は確定次第Twitterにてお知らせしますのでしばらくお待ち下さい。<br><br>また5/3(日)より企画コミュニティ兼企画用サーバー「連投鯖」がDiscordでOPENします。ぜひご参加ください。</p>
+            <h1>どんな企画？</h1>
+            <p>私たちはPV作者間、映像制作者間の交流を目的とし、春、夏、冬にPV(映像)の連続投稿企画を行っています。</p>
+            <h1>過去企画</h1>
 
             <a href="https://springpv.netlify.com/">
                 <img src="img/spring.png" class="kakorogo">
             </a>
             <iframe src="https://www.youtube.com/embed/F7BaXhWzL7M" class="you" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <br>
-    </section>
-    <section class="kakoh" id=kakoh>
-        <br>
-
-        <div class="kohaku1">
             <a href="https://pvkohaku.netlify.com/">
                 <img src="img/pv%20kohaku1.jpg" class="kakorogo">
             </a>
             <iframe src="https://www.youtube.com/embed/iKNdOfyh2o0?start=39" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" class="you" allowfullscreen></iframe>
 
-        </div>
-    </section>
+            <h1>実行委員</h1>
+            <div class="items">
+                <div class="item">
+                    <a href="https://twitter.com/coroke3">
+                        <div class="item-img"><img src="img/mochi.svg" class="im"></div>
+                        <div class="item-body">
+                            <center>
+                                <div class="item-title">
+                                    主催
+                                </div>
+                                <p>
+                                    Mochi
+                                </p>
+                            </center>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="https://twitter.com/Jisho_issy">
+                        <div class="item-img"><img src="img/isida.jpg" class="im"></div>
+                        <div class="item-body">
+                            <center>
+                                <div class="item-title">
+                                    映像
+                                </div>
+                                <p>
+                                    石田
+                                </p>
+                            </center>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="https://twitter.com/TN00b13">
+                        <div class="item-img"><img src="img/th3_n00b13.png" class="im"></div>
+                        <div class="item-body">
+                            <center>
+                                <div class="item-title">
+                                    3DCG
+                                </div>
+                                <p>
+                                    th3_n00b13
+                                </p>
+                            </center>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
 
-    <section class="menber" id="menber">
-        <h1>
-            実行委員
-        </h1>
-        <a><a href="https://twitter.com/coroke3">
-                ・Mochi(主催)
-            </a></a><br>
+                    <a href="https://twitter.com/gakihure">
 
-        <a><a href="https://twitter.com/gakihure">
-                ・フレン
-            </a></a><br>
-        <a><a href="https://twitter.com/manjuuch3">
-                ・まんじゅうチャンネル
-            </a></a><br>
-        <a><a href="https://twitter.com/TN00b13">
-                ・th3_n00b13
-            </a></a><br>
-        <br>
-        <br><a>
-            2020春まで
-        </a><br>
-        <a><a href="https://twitter.com/hakua_loveEQ">
-                ・ハクアを博愛する人
-            </a></a><br>
-        <a><a href="https://twitter.com/minatoo86/">
-                ・Minami Minato / 巳波みなと
-            </a></a><br>
-        <h1>
-            実行委員募集中！
-        </h1><br><a href="https://twitter.com/pv_rentoo/status/1212201981164445696?s=20">
-            <img src="img/jikkou.png" class="rogo">　詳しくは画像をクリック</a>
+                        <div class="item-img"><img src="img/fren.jpg" class="im"></div>
+                        <div class="item-body">
+                            <center>
+                                <div class="item-title">
+                                    映像
+                                </div>
+                                <p>
+                                    フレン
+                                </p>
+                            </center>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+
+                    <a href="https://twitter.com/manjuuch3">
+
+                        <div class="item-img"><img src="img/mannjuu.jpg" class="im"></div>
+                        <div class="item-body">
+                            <center>
+                                <div class="item-title">
+                                    映像
+                                </div>
+                                <p>
+                                    まんじゅうチャンネル
+                                </p>
+                            </center>
+                        </div>
+                    </a>
+                </div>
+                <div class="item"></div>
+            </div>
+            <h2>~2020 spring</h2>
+            <div class="items">
+                <div class="item">
+                    <a href="https://twitter.com/minatoo86">
+                        <div class="item-img"><img src="img/mianato86.png" class="im"></div>
+                        <div class="item-body">
+                            <center>
+                                <div class="item-title">
+                                    ホームページ協力
+                                </div>
+                                <p>
+                                    巳波みなと
+                                </p>
+                            </center>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="https://twitter.com/hakua_love">
+                        <div class="item-img"><img src="img/hakua.jpg" class="im"></div>
+                        <div class="item-body">
+                            <center>
+                                <div class="item-title">
+                                    映像
+                                </div>
+                                <p>
+                                    ハクアを博愛する人
+                                </p>
+                            </center>
+                        </div>
+                    </a>
+                </div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </section>
 
 
-    </section>
-    <section class="sns" id="sns">
-        <h1>公式SNS</h1>
-        <div>
-            <h1>
-                <a><a href="https://twitter.com/pv_rentoo" target="_blank">
-                        <i class="fab fa-twitter">　Twitter</i></a>
-                    <a href="https://bit.ly/375WdYW" target="_blank">
-                        <i class="fab fa-youtube">　YouTube</i></a></a></h1>
-        </div>
+        <a href="https://www.free-counter.jp/"><img src="https://www.f-counter.net/j/33/1587368366/" alt="アクセスカウンター"></a>
+        <p><br><br>
 
-    </section>
-
+            <br>
+        </p>
+    </div>
 </body>
-
-</html>

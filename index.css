@@ -1,0 +1,418 @@
+<@charset "UTF-8";
+
+> body {
+    -webkit-text-size-adjust: 100%;
+    font-family: 'Noto Sans JP',
+        "Helvetica Neue",
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Meiryo,
+        sans-serif;
+    "sans-serif";
+
+}
+
+#loader-bg {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: #000;
+    z-index: 1;
+}
+
+#loader {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
+
+.about {
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+}
+
+.works {
+    max-width: 1300px;
+    width: 100%;
+    clear: left;
+    margin: auto;
+}
+
+.contact {
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+}
+
+.top {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.rogo {
+    position: absolute;
+    width: 10%;
+    top: 34%;
+    right: 44%;
+}
+
+.moji {
+    width: 10%;
+    position: absolute;
+    right: 44%;
+    bottom: 37%;
+    margin: auto;
+    font-size: 1.3em;
+}
+
+.minirogo {
+    width: 25%;
+    float: left;
+}
+
+.kakorogo {
+    margin-left: 10px;
+    width: 95%;
+    height: auto;
+    border: 5px solid #dcdcdc;
+    border-radius: 30px;
+}
+
+table {
+    margin: 2% 1% 1% 5%;
+    font-weight: 700;
+}
+
+
+.abouttext {
+    float: right;
+}
+
+.twitter {
+    color: #1da1f2;
+    text-decoration: none;
+}
+
+.youtube {
+    color: #FF0000;
+    text-decoration: none;
+}
+
+.items {
+    margin: 4%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.items .item {
+    width: 19%;
+    margin: 2px;
+}
+
+
+.item-img {
+    padding: 0;
+}
+
+.item-body {
+    padding: 0;
+}
+
+.item-title {
+    margin: auto;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+.item-body p {
+    margin: 5;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+.im {
+    width: 98%;
+    border-radius: 50%;
+    box-shadow: 0.2em 0.1em 0.1em gray;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 900;
+    color: #000000;
+    margin: 50px 0px 26px 0px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    margin: 60px 0px 20px 2%;
+    color: #000000;
+}
+
+p {
+    font-size: 1.1rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    margin-left: 4%;
+    margin-top: 0px;
+    color: #000000;
+}
+
+p1 {
+    font-size: 1.1rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    margin: auto;
+    color: #000000;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    margin-left: 4%;
+    margin-top: 2%;
+    color: #000000;
+}
+
+td {
+    font-size: 1rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+url {
+    color: #4169e1;
+}
+
+.kakorogo {
+    margin-left: 10px;
+    margin: auto;
+    width: 480px;
+    height: 270px;
+    border: 9px solid #c0c0c0;
+    border-radius: 30px;
+
+}
+
+.you {
+    margin: auto;
+    padding-left: 10px;
+    width: 512px;
+    height: 288px;
+}
+
+@media screen and (max-width: 1400px) {
+
+    .about,
+    .works,
+    .contact {
+        max-width: 900px;
+        margin: auto;
+    }
+
+
+    .rogo {
+        position: absolute;
+        width: 12%;
+        top: 34%;
+        right: 43%;
+    }
+
+    .moji {
+        width: 12%;
+        position: absolute;
+        right: 43%;
+        bottom: 37%;
+    }
+
+    .kakorogo {
+        margin-left: 10px;
+        height: auto;
+        width: 500px;
+        border: 9px solid #c0c0c0;
+        border-radius: 30px;
+        margin: 10px;
+
+    }
+
+    .you {
+        padding-left: 10px;
+        height: auto;
+        width: 500px;
+        margin: 10px;
+    }
+
+    .items .item {
+        width: 32%;
+    }
+
+    .im {
+        width: 97%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+
+    .about,
+    .works,
+    .contact {
+        width: 100%;
+        margin: 2%;
+    }
+
+    .rogo {
+        position: absolute;
+        width: 10%;
+        top: 34%;
+        right: 44%;
+    }
+
+    .rogo {
+        position: absolute;
+        width: 20%;
+        top: 34%;
+        right: 40%;
+    }
+
+    .moji {
+        width: 20%;
+        position: absolute;
+        right: 40%;
+        bottom: 37%;
+    }
+
+
+    .items .item {
+        width: 49%;
+    }
+
+    .im {
+        width: 100%;
+    }
+
+    .minirogo {
+        width: 100%;
+        float: left;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+
+
+
+    .rogo {
+        position: absolute;
+        width: 25%;
+        top: 34%;
+        right: 36%;
+    }
+
+    .moji {
+        width: 25%;
+        position: absolute;
+        right: 36%;
+        bottom: 37%;
+    }
+
+    .kakorogo {
+        margin-left: 10px;
+
+        width: 87%;
+        border: 9px solid #c0c0c0;
+        border-radius: 30px;
+        margin: 10px;
+
+    }
+
+    .you {
+        padding-left: 10px;
+        width: 87%;
+        margin: 10px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+
+    .rogo {
+        position: absolute;
+        width: 30%;
+        top: 34%;
+        right: 34%;
+    }
+
+    .moji {
+        width: 30%;
+        position: absolute;
+        right: 34%;
+        bottom: 37%;
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 500px) {
+
+    .rogo {
+        position: absolute;
+        width: 45%;
+        top: 34%;
+        right: 26%;
+    }
+
+    .moji {
+        width: 45%;
+        position: absolute;
+        right: 26%;
+        bottom: 37%;
+    }
+
+    .about {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .works {
+        margin-left: 2%;
+        margin-right: 2%;
+        clear: left;
+    }
+
+    .contact {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .items .item {
+        width: 100%;
+    }
+}
