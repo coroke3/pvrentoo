@@ -134,15 +134,29 @@ table {
 }
 
 .item-title {
-    margin: auto;
-    font-size: 0.8rem;
+    margin: 15px 0px 5px 0px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+.item-title2 {
+    margin: 15px 0px 5px 0px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+.item-title3 {
+    margin: 15px 0px 5px 0px;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #000000;
 }
 
 .item-body p {
-    margin: 5;
-    font-size: 1.3rem;
+    margin: 0px 0px 30px;
+    font-size: 0.8rem;
     font-weight: 700;
     color: #000000;
 }
@@ -268,7 +282,7 @@ url {
     }
 
     .items .item {
-        width: 32%;
+        width: 24%;
     }
 
     .im {
@@ -308,11 +322,11 @@ url {
 
 
     .items .item {
-        width: 49%;
+        width: 31%;
     }
 
     .im {
-        width: 100%;
+        width: 98%;
     }
 
     .minirogo {
@@ -356,6 +370,10 @@ url {
         margin: 10px;
     }
 
+    .items .item {
+        width: 48%;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -374,6 +392,7 @@ url {
         right: 34%;
         bottom: 37%;
     }
+
 
 
 }
