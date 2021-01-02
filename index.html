@@ -1,252 +1,466 @@
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="lity.min.css">
     <script src="jquery.js"></script>
     <script src="lity.min.js"></script>
-    <title>PV連投企画　OfficialSite</title>
+    <title>PVSF/PV連続投稿企画　OfficialSite</title>
     <link rel="shortcut icon" href="img/web.ico" type="image/vnd.microsoft.icon">
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@pv_rentoo" />
-    <meta property="og:url" content="pvrentoo.netlify.com" />
-    <meta property="og:title" content="Mochi　officialsite" />
-    <meta property="og:description" content="PV連投企画のオフィシャルサイトです。" />
-    <meta property="og:image" content="img/rogo.png" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <meta property="og:url" content=" https://pvrentoo.s-mochi.net">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PVSF/PV連続投稿企画">
+    <meta property="og:description" content="PV連続投稿企画のサイトです。年3回映像の連続投稿企画をしています。">
+    <meta property="og:site_name" content="PVSF/PV連続投稿企画s">
+    <meta property="og:image" content="https://i.gyazo.com/f6d9a0f17a3db4f447c7739efffd05df.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@pv_rentoo">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <script>
-        $(function() {
-            var h = $(window).height();
-
-            $('#wrap').css('display', 'none');
-            $('#loader-bg ,#loader').height(h).css('display', 'block');
-        });
-
-        $(window).load(function() { //全ての読み込みが完了したら実行
-            $('#loader-bg').delay(900).fadeOut(800);
-            $('#loader').delay(600).fadeOut(300);
-            $('#wrap').css('display', 'block');
-        });
-
-        //10秒たったら強制的にロード画面を非表示
-        $(function() {
-            setTimeout('stopload()', 10000);
-        });
-
-        function stopload() {
-            $('#wrap').css('display', 'block');
-            $('#loader-bg').delay(900).fadeOut(800);
-            $('#loader').delay(600).fadeOut(300);
-        }
-
+        (function (d) {
+            var config = {
+                kitId: 'lme4hjx',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement,
+                t = setTimeout(function () {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function () {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) { }
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
     </script>
 </head>
 
+
 <body>
-    <div id="loader-bg">
-        <div id="loader">
-            <img src="img/black.svg" width=" 80" height="80" alt="Now Loading..." />
-        </div>
-    </div>
-    <div id="wrap">
-        <section class="top">
-            <center><img src="img/rogo.svg" class="rogo"> </center>
-            <center>
-                <p class="moji">PV連続投稿企画</p>
-            </center>
-        </section>
-        <section class="about">
-
-            <center>
-                <p1>公式SNS</p1>
-                <a href="https://twitter.com/pv_rentoo" class="twitter">
-                    <i class="fab fa-twitter"></i></a>
-                <a href="https://www.youtube.com/channel/UCBvhWOJ3sR3hBjO4xjq3aGQ" class="youtube">
-                    <i class="fab fa-youtube"></i></a>
-            </center>
-            <h1>お知らせ</h1>
-            <p>新型ウイルスの影響で、夏休みなどの休みが不明な状況のため、8月に開催を予定していた、「夏のPV連続投稿祭」は6月に前倒しする形で開催します。<br>日程は確定次第Twitterにてお知らせしますのでしばらくお待ち下さい。<br><br>また5/3(日)より企画コミュニティ兼企画用サーバー「連投鯖」がDiscordでOPENします。ぜひご参加ください。</p>
-            <h1>どんな企画？</h1>
-            <p>私たちはPV作者間、映像制作者間の交流を目的とし、春、夏、冬にPV(映像)の連続投稿企画を行っています。</p>
-            <h1>過去企画</h1>
-
-            <a href="https://springpv.netlify.com/">
-                <img src="img/spring.png" class="kakorogo">
-            </a>
-            <iframe src="https://www.youtube.com/embed/F7BaXhWzL7M" class="you" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <a href="https://pvkohaku.netlify.com/">
-                <img src="img/pv%20kohaku1.jpg" class="kakorogo">
-            </a>
-            <iframe src="https://www.youtube.com/embed/iKNdOfyh2o0?start=39" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" class="you" allowfullscreen></iframe>
-
-            <h1>実行委員</h1>
-            <div class="items">
-                <div class="item">
-                    <a href="https://twitter.com/coroke3">
-                        <div class="item-img"><img src="img/mochi.svg" class="im"></div>
-                        <div class="item-body">
-                            <center>
-                                <div class="item-title">
-                                    Mochi
-                                </div>
-                                <p>
-                                    主催
-                                </p>
-                            </center>
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://twitter.com/Jisho_issy">
-                        <div class="item-img"><img src="img/isida.jpg" class="im"></div>
-                        <div class="item-body">
-                            <center>
-                                <div class="item-title">
-                                    石田
-                                </div>
-                                <p>
-                                    映像
-                                </p>
-                            </center>
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://twitter.com/TN00b13">
-                        <div class="item-img"><img src="img/th3_n00b13.png" class="im"></div>
-                        <div class="item-body">
-                            <center>
-                                <div class="item-title">
-                                    th3_n00b13
-                                </div>
-                                <p>
-                                    3DCG
-                                </p>
-                            </center>
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-
-                    <a href="https://twitter.com/gakihure">
-
-                        <div class="item-img"><img src="img/fren.jpg" class="im"></div>
-                        <div class="item-body">
-                            <center>
-                                <div class="item-title">
-                                    フレン
-                                </div>
-                                <p>
-                                    映像
-                                </p>
-                            </center>
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-
-                    <a href="https://twitter.com/manjuuch3">
-
-                        <div class="item-img"><img src="img/mannjuu.jpg" class="im"></div>
-                        <div class="item-body">
-                            <center>
-                                <div class="item-title3">
-                                    まんじゅうチャンネル
-                                </div>
-                                <p>
-                                    映像
-                                </p>
-                            </center>
-                        </div>
-                    </a>
-                </div>
-                <div class="item"></div>
-            </div>
-
-            <h2>スペシャルサンクス</h2>
-            <div class="items">
-                <div class="item">
-                    <a href="https://twitter.com/TRAFDACO">
-                        <div class="item-img"><img src="img/traf.jpg" class="im"></div>
-                        <div class="item-body">
-                            <center>
-                                <div class="item-title">
-                                    TRAF
-                                </div>
-                                <p>
-                                    ロゴ制作
-                                </p>
-                            </center>
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://mobile.twitter.com/hs_aochan13">
-                        <div class="item-img"><img src="img/yuzukiaone.jpg" class="im"></div>
-                        <div class="item-body">
-                            <center>
-                                <div class="item-title">
-                                    柚雪 蒼音
-                                </div>
-                                <p>
-                                    2020春 楽曲提供
-                                </p>
-                            </center>
-                        </div>
-                    </a>
-                </div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-            </div>
-            <h2>~2020 spring</h2>
-            <div class="items">
-                <div class="item">
-                    <a href="https://twitter.com/minatoo86">
-                        <div class="item-img"><img src="img/mianato86.png" class="im"></div>
-                        <div class="item-body">
-                            <center>
-                                <div class="item-title">
-                                    巳波みなと
-                                </div>
-                                <p>
-                                    ホームページ協力
-                                </p>
-                            </center>
-                        </div>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://twitter.com/hakua_love">
-                        <div class="item-img"><img src="img/hakua.jpg" class="im"></div>
-                        <div class="item-body">
-                            <center>
-                                <div class="item-title2">
-                                    ハクアを博愛する人
-                                </div>
-                                <p>
-                                    映像
-                                </p>
-                            </center>
-                        </div>
-                    </a>
-                </div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-            </div>
-        </section>
-
-
-        <a href="https://www.free-counter.jp/"><img src="https://www.f-counter.net/j/33/1587368366/" alt="アクセスカウンター"></a>
-        <p><br><br>
-
-            <br>
-        </p>
-    </div>
-    <section class="under">
+    <iframe src="https://pvrentoo.s-mochi.net/head" width="100%" height="90" frameborder="0"></iframe>
+    <section class="top">
+        <center><img src="https://i.gyazo.com/05868b6c30e833b4e12029c3983b99e8.gif" class="rogo"> </center>
         <center>
-            <p>主催/HP制作 <a href="https://work.s-mochi.net/">Mochi</a></p>
+            <img src="img/moji.webp" class="moji">
         </center>
     </section>
+
+
+    <center>
+        <p1>公式SNS</p1>
+        <a href="https://twitter.com/pv_rentoo" class="twitter">
+            <i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UCBvhWOJ3sR3hBjO4xjq3aGQ" class="youtube">
+            <i class="fab fa-youtube"></i></a>
+    </center>
+    <section class="kyatti">
+        <center>
+            <kh1>みんなで、成長しよう</kh1>
+            <br>
+            <p1>PVSFは、クリエイター同士の交流を目的に行っているイベントです。</p1>
+        </center>
+    </section>
+    <section class="about">
+        <div class="otice">
+            <center>
+            <h1>お知らせ</h1>
+        </center>
+            <p>PVSFは、主催の受験のため、2021年春休みに行われる「春のPV連続投稿祭
+                #PVSF2020Sp」をもちまして、PVSFmini、連投合作などの関連企画も含め、すべての企画を休止致します。<br>ぜひ休止前最後のPVSFの企画にご参加ください。再開は未定となります。短い間でしたが、ご参加ありがとうございました。
+            </p>
+        </div>
+        <h1>開催中</h1>
+        <center>
+            <p1>現在「春のPV連続投稿祭」「PVSFmini」「連投合作」の3企画が進行中です</p1>
+        </center>
+        <main>
+            <div class="column">
+                <h2><img src="img/kohakurogo.webp" class="urogo"></h2>
+                <p>「自主制作投稿祭」春のPV連続投稿祭 #PVSF2020Sp 、参加者募集中！！<br><br><br> 詳しくは↓公式サイトをご覧下さい。<br><br></p>
+
+
+                <a href="https://pvrentoo.s-mochi.net/spring">
+                    <img src="img/spring2021hp.webp" class="kirogo">
+                </a>
+
+
+            </div>
+            <div class="column">
+                <h2><img src="img/PVSFminirogo.webp" class="urogo"></h2>
+                <p>
+                    "せっかくの連休、映像作ってみない？"<br>課題曲で映像を作るミニ企画。概ね月1回行います。ご気軽にご参加ください！<br><br>詳しくは↓公式サイトをご覧下さい。<br><br></p>
+                <a href="https://pvrentoo.s-mochi.net/mini">
+                    <img src="img/pvsfminihp.webp" class="kirogo">
+                </a>
+
+            </div>
+
+            <div class="column">
+                <h2><img src="img/gassakurogo.webp" class="urogo"></h2>
+                <p> 製作者同士の個性が一つの作品にぶつかり合う一大企画です！！<br>第四回連投合作、受付は終了しました。<br><br>詳しくは↓公式サイトをご覧下さい。
+
+
+                    <br><br>
+                </p>
+
+                <a href="https://pvrentoo.s-mochi.net/gassaku">
+                    <img src="img/gassakuhp.webp" class="kirogo">
+                </a>
+            </div>
+        </main>
+
+
+
+    </section>
+    <section id="hai" class="about">
+        <h1>過去企画</h1>
+        <center>
+            <h2>PVSF/PV連続投稿祭</h2>
+        </center>
+        <main>
+            <div class="kakoy">
+                <h2>紅白PV連続投稿合戦 #PVSF2020R</h2>
+                <p>2020 12/25~12/26<br><br>
+                    <a href="https://pvrentoo.s-mochi.net/kohaku">
+                        <img src="img/kohakupvhp.webp" class="kakorogo">
+                    </a>
+                    <iframe src="https://www.youtube.com/embed/1E1Oejpr1TQ" class="you" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </p>
+            </div>
+
+            <div class="kakoy">
+                <h2>秋のPV連続投稿祭 #PVSF2020F</h2>
+                <p>2020 09/20~09/21<br><br>
+                    <a href="https://pvrentoo.s-mochi.net/fall">
+                        <img src="img/fallpvhp.webp" class="kakorogo">
+                    </a>
+                    <iframe src="https://www.youtube.com/embed/ATNS1lajM-U" class="you" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </p>
+            </div>
+            <div class="kakoy">
+                <h2>夏のPV連続投稿祭 #PVSF2020S</h2>
+                <p>2020 06/13~06/14<br><br>
+                    <a href="https://pvrentoo.s-mochi.net/summer">
+                        <img src="img/summerpvhp.webp" class="kakorogo">
+                    </a>
+                    <iframe src="https://www.youtube.com/embed/1b_8xTt3idU" class="you" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </p>
+            </div>
+            <div class="kakoy">
+                <h2>第一回　春のPV連続投稿祭</h2>
+
+                <p>2020 03/30~04/01<br><br>
+                    <a href="https://springpv.netlify.com/">
+                        <img src="img/springpvhp.webp" class="kakorogo">
+                    </a>
+                    <iframe src="https://www.youtube.com/embed/F7BaXhWzL7M" class="you" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </p>
+            </div>
+            <div class="kakoy">
+                <h2>第一回　紅白PV連続投稿合戦</h2>
+                <p>2019 12/27~12/29<br><br>
+                    <a href="https://pvkohaku.netlify.com/">
+                        <img src="img/pvkohakuhp.webp" class="kakorogo">
+                    </a>
+                    <iframe src="https://www.youtube.com/embed/iKNdOfyh2o0" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" class="you"
+                        allowfullscreen></iframe>
+                </p>
+            </div>
+        </main><br><br>
+        <center>
+            <h2>連投合作</h2>
+        </center>
+        <main>
+            <div class="kakoy">
+                <h2>第四回連投合作</h2>
+                <p>2020 12/27<br>対象x - ユリイ・カノン<br><br>
+                    <center>
+                        <iframe src="https://www.youtube.com/embed/ZWBLuBAshZE" class="you" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </center>
+                </p>
+            </div>
+            <div class="kakoy">
+                <h2>第三回連投合作</h2>
+                <p>2020 09/22<br>フィクサー - ぬゆり<br><br>
+                    <center>
+                        <iframe src="https://www.youtube.com/embed/nmtZuuOqy-U" class="you" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </center>
+                </p>
+            </div>
+            <div class="kakoy">
+                <h2>第ニ回連投合作</h2>
+                <p>2020 06/14<br>すろぉもぉしょん - ピノキオピー<br><br>
+                    <center>
+                        <iframe src="https://www.youtube.com/embed/OT7qGekmuSw" class="you" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </center>
+                </p>
+            </div>
+            <div class="kakoy">
+                <h2>第一回連投合作</h2>
+                <p>2020 04/02<br>表裏一体 - すりぃ<br><br>
+                    <center>
+                        <iframe src="https://www.youtube.com/embed/1RW8GMtmhs8" class="you" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </center>
+                </p>
+            </div>
+        </main><br><br>
+        <p>参加者などの詳しい情報は<a href="https://pvrentoo.s-mochi.net/gassaku">連投合作HP</a>へ</p>
+    </section>
+    <section class="about">
+        <h1>実行委員</h1>
+        <div class="items">
+            <div class="item">
+                <a href="https://twitter.com/coroke3">
+                    <div class="item-img"><img src="img/mochi.webp" class="im"></div>
+                    <div class="item-body">
+                        <center>
+                            <div class="item-title">
+                                Mochi
+                            </div>
+                            <p>
+                                主催
+                            </p>
+                        </center>
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="https://twitter.com/TN00b13">
+                    <div class="item-img"><img src="img/th3_n00b13.webp" class="im"></div>
+                    <div class="item-body">
+                        <center>
+                            <div class="item-title">
+                                th3_n00b13
+                            </div>
+                            <p>
+
+                            </p>
+                        </center>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+
+                <a href="https://twitter.com/SilkPine_movie">
+
+                    <div class="item-img"><img src="img/kinumatu.webp" class="im"></div>
+                    <div class="item-body">
+                        <center>
+                            <div class="item-title">
+                                絹松
+                            </div>
+                            <p>
+
+                            </p>
+                        </center>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://twitter.com/hs_nozomizo13">
+                    <div class="item-img"><img src="img/yuzukiaone.webp" class="im"></div>
+                    <div class="item-body">
+                        <center>
+                            <div class="item-title">
+                                ゆずき あおね
+                            </div>
+                            <p>
+
+                            </p>
+                        </center>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+
+                <a href="https://twitter.com/LR_Muso">
+
+                    <div class="item-img"><img src="img/hi.webp" class="im"></div>
+                    <div class="item-body">
+                        <center>
+                            <div class="item-title">
+                                ヒ
+                            </div>
+                            <p>
+
+                            </p>
+                        </center>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+
+                <a href="https://twitter.com/nntek_">
+
+                    <div class="item-img"><img src="img/nankotu.webp" class="im"></div>
+                    <div class="item-body">
+                        <center>
+                            <div class="item-title">
+                                てこ
+                            </div>
+                            <p>
+
+                            </p>
+                        </center>
+                    </div>
+                </a>
+            </div>
+
+
+
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+
+
+        <h2>協力・過去メンバー</h2>
+        <div class="items">
+            <div class="item">
+                <a href="https://twitter.com/TRAFDACO">
+                    <div class="item-img"><img src="img/traf.webp" class="im"></div>
+                    <div class="item-body">
+                        <center>
+                            <div class="item-title">
+                                TRAF
+                            </div>
+                            <p>
+                                ロゴ制作
+                            </p>
+                        </center>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://twitter.com/minatoo86">
+                    <div class="item-img"><img src="img/mianato86.webp" class="im"></div>
+                    <div class="item-body">
+                        <center>
+                            <div class="item-title">
+                                巳波みなと
+                            </div>
+                            <p>
+                                ホームページ制作援助<br>~2020 spring
+                            </p>
+                        </center>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://twitter.com/hakua_loveEQ">
+                    <div class="item-img"><img src="img/hakua.webp" class="im"></div>
+                    <div class="item-body">
+                        <center>
+                            <div class="item-title3">
+                                ハクアを博愛する人
+                            </div>
+                            <p>
+                                映像<br>~2020 spring
+                            </p>
+                        </center>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+
+                <a href="https://twitter.com/gakihure">
+
+                    <div class="item-img"><img src="img/fren.webp" class="im"></div>
+                    <div class="item-body">
+                        <center>
+                            <div class="item-title">
+                                フレン
+                            </div>
+                            <p>
+                                映像<br>~2020spring
+                            </p>
+                        </center>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://twitter.com/shr_ishida">
+                    <div class="item-img"><img src="img/isida.webp" class="im"></div>
+                    <div class="item-body">
+                        <center>
+                            <div class="item-title">
+                                <p1>Shiraishi Daichi</p1><br>石田
+                            </div>
+                            <p>
+                                映像<br>~2020 fall
+                            </p>
+                        </center>
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+
+                <a href="https://twitter.com/Huyu_2239
+                ">
+
+                    <div class="item-img"><img src="img/huyu.webp" class="im"></div>
+                    <div class="item-body">
+                        <center>
+                            <div class="item-title">
+                                冬優
+                            </div>
+                            <p>
+                                プログラム<br>~2020 fall
+                            </p>
+                        </center>
+                    </div>
+                </a>
+            </div>
+
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </section>
+
+
+    <a href="https://www.free-counter.jp/"><img src="https://www.f-counter.net/j/33/1587368366/" alt="アクセスカウンター"></a>
+    <p><br><br>
+
+        <br>
+    </p>
+    <section class="under">
+        <center>
+            <p>主催/HP制作 <a href="https://work.s-mochi.net/">Mochi</a>　ロゴ制作 <a
+                    href="https://twitter.com/TRAFDACO">TRAF</a></p>
+        </center>
+
+    </section>
+
 </body>

@@ -1,0 +1,499 @@
+        <@charset "UTF-8";
+        >g {}
+        
+        body {
+            background-color: #ffffff;
+            font-family: source-han-sans-japanese, "Shin Go Medium", 'Noto Sans JP'sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            margin: 0;
+        }
+        
+        #loader-bg {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            background: #fff;
+            z-index: 1;
+        }
+        
+        #loader {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            margin-top: -100px;
+            margin-left: -100px;
+            text-align: center;
+            color: #fff;
+            z-index: 2;
+        }
+        
+        .about {
+            max-width: 1300px;
+            width: 100%;
+            margin: auto;
+        }
+        
+        .top {
+            width: 100%;
+        }
+        
+        .rogo {
+            width: 300px;
+            margin: 50px;
+        }
+        
+        .moji {
+            width: 250px;
+            margin: 20px;
+        }
+        
+        .minirogo {
+            width: 25%;
+            float: left;
+        }
+        
+        .twitter {
+            color: #1da1f2;
+            text-decoration: none;
+        }
+        
+        .youtube {
+            color: #FF0000;
+            text-decoration: none;
+        }
+        .otice{
+            font-weight: bold;
+            color: #6091d3;
+            background: #cde4ff;
+            border: solid 3px #6091d3;
+            border-radius: 10px;
+            padding: 2%;
+        }
+        .otice h1{
+            font-family: source-han-sans-japanese, sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            margin: 0;
+            font-size: 1.2rem;
+            padding-bottom: 1rem;
+        }
+        .otice p {
+            font-family: source-han-sans-japanese, sans-serif;
+            font-weight: 200;
+            font-style: normal;
+            margin: 0;
+            font-size: 1rem;
+        }
+        
+        .items {
+            margin: 4%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .items .item {
+            width: 13%;
+            margin: 2px;
+        }
+        
+        .item-img {
+            padding: 0;
+        }
+        
+        .item-body {
+            padding: 0;
+        }
+        
+        .item-title {
+            font-family: a-otf-futo-go-b101-pr6n, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            margin: 15px 0px 5px 0px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #000000;
+        }
+        
+        .item-title2 {
+            font-family: a-otf-futo-go-b101-pr6n, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            margin: 15px 0px 5px 0px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #000000;
+        }
+        
+        .item-title3 {
+            font-family: a-otf-futo-go-b101-pr6n, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            margin: 15px 0px 5px 0px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #000000;
+        }
+        
+        .item-body p {
+            font-family: a-otf-gothic-bbb-pr6n, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin: 0px 0px 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #000000;
+        }
+        
+        .im {
+            width: 98%;
+            border-radius: 50%;
+            box-shadow: 0.2em 0.1em 0.1em gray;
+        }
+        
+        .kyatti {
+            margin: 50px 0px 50px 0px;
+            background: linear-gradient(#00bfff, #87ceeb);
+            padding: 70px 50px 75px 50px;
+        }
+        
+        kh1 {
+            font-size: 2.5rem;
+            font-family: vdl-logona, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #000000;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            font-family: a-otf-midashi-go-mb31-pr6n, sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            color: #000000;
+            margin: 100px 0px 20px 0px;
+            border-width: 5px;
+        }
+        
+        h2 {
+            font-size: 1.7rem;
+            font-family: a-otf-futo-go-b101-pr6n, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            margin: 50px 0px 20px 2%;
+            color: #000000;
+        }
+        
+        p {
+            font-size: 1rem;
+            font-family: a-otf-gothic-bbb-pr6n, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-left: 4%;
+            margin-right: 4%;
+            color: #000000;
+        }
+        
+        .p1 {
+            font-size: 1rem;
+            font-family: a-otf-gothic-bbb-pr6n, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin: auto;
+            color: #000000;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            font-family: a-otf-gothic-bbb-pr6n, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-left: 4%;
+            margin-top: 2%;
+            color: #000000;
+        }
+        
+        p1 {
+            font-size: 1.1rem;
+            font-family: a-otf-gothic-bbb-pr6n, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin: auto;
+            color: #000000;
+        }
+
+        p2 {
+            font-size: 0.9rem;
+            font-family: a-otf-gothic-bbb-pr6n, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin: auto;
+            color: #000000;
+        }
+        
+
+        
+        red {
+            color: red;
+        }
+        
+        .entry {
+            padding: 0.5em 1em;
+            margin: 30;
+            font-weight: bold;
+            color: #000000;
+            /*文字色*/
+            background: #f5f5f5;
+            border: solid 3px #000;
+            /*線*/
+            border-radius: 10px;
+            /*角の丸み*/
+            font-size: 30px;
+        }
+        
+        .disco {
+            padding: 0.5em 1em;
+            margin: 30;
+            font-weight: bold;
+            color: #000000;
+            /*文字色*/
+            background: #e0ffff;
+            border: solid 3px #4169e1;
+            /*線*/
+            border-radius: 10px;
+            /*角の丸み*/
+            font-size: 30px;
+        }
+        
+        td {
+            font-family: source-han-sans-japanese, "Shin Go Medium", 'Noto Sans JP'sans-serif;
+            font-weight: 900;
+            font-style: normal;
+            font-size: 1rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+        
+        .iro {
+            color: #4169e1;
+        }
+        
+        .kakorogo {
+            margin-left: 10px;
+            margin: auto;
+            width: 31%;
+            border: 9px solid #c0c0c0;
+            border-radius: 30px;
+        }
+        
+        .you {
+            margin: auto;
+            padding-left: 10px;
+            width: 512px;
+            height: 288px;
+        }
+        
+        .kadai {
+            height: 675px;
+            width: 1200px;
+        }
+        
+        .entry {
+            padding: 0.5em 1em;
+            margin: 30;
+            font-weight: bold;
+            color: #000000;
+            /*æ–‡å­—è‰²*/
+            background: #f5f5f5;
+            border: solid 3px #000;
+            /*ç·š*/
+            border-radius: 10px;
+            /*è§’ã®ä¸¸ã¿*/
+            font-size: 30px;
+        }
+        
+        nav {
+            background-color: #ffffff;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        nav a {
+            font-family: source-han-sans-japanese, "Shin Go Medium", 'Noto Sans JP'sans-serif;
+            color: #000000;
+            text-decoration: none;
+        }
+        
+        nav a:hover {
+            color: #000000;
+        }
+        
+        nav ul {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        
+        @media screen and (max-width: 1400px) {
+            .about {
+                max-width: 900px;
+                margin: auto;
+            }
+            .kadai {
+                height: 478px;
+                width: 850px;
+            }
+            .kakorogo {
+                margin-left: 10px;
+                width: 44%;
+                border: 9px solid #c0c0c0;
+                border-radius: 30px;
+                margin: 10px;
+            }
+            .you {
+                padding-left: 10px;
+                height: auto;
+                width: 500px;
+                margin: 10px;
+            }
+            .items .item {
+                width: 18%;
+            }
+            .im {
+                width: 97%;
+            }
+        }
+        
+        @media screen and (max-width: 980px) {
+            .about {
+                width: 98%;
+                margin: 2%;
+            }
+            .kadai {
+                height: 380px;
+                width: 100%;
+            }
+            .items .item {
+                width: 23%;
+            }
+            .im {
+                width: 98%;
+            }
+            .minirogo {
+                width: 100%;
+                float: left;
+            }
+        }
+        
+        @media screen and (max-width: 750px) {
+            .kakorogo {
+                margin-left: 10px;
+                width: 87%;
+                border: 9px solid #c0c0c0;
+                border-radius: 30px;
+                margin: 10px;
+            }
+            .you {
+                padding-left: 10px;
+                width: 87%;
+                margin: 10px;
+            }
+            .items .item {
+                width: 30%;
+            }
+            .rogo{
+                width: 75%;
+                margin: auto;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            iframe {
+                height: 100;
+            }
+        }
+        
+        @media screen and (max-width: 500px) {
+            .about {
+                margin-left: 2%;
+                margin-right: 2%;
+            }
+            .works {
+                margin-left: 2%;
+                margin-right: 2%;
+                clear: left;
+            }
+            .contact {
+                margin-left: 2%;
+                margin-right: 2%;
+            }
+            .items .item {
+                width: 48%;
+            }
+            h1 {
+                margin: 40px 0 20px 0;
+                font-size: 1.6rem;
+            }
+            h2 {
+                margin: 30px 1% 10px 1%;
+                font-size: 1.4rem;
+            }
+            h3 {
+                margin: 0% 1% 0% 1%;
+                font-size: 1.2rem;
+            }
+            p {
+                margin: 0% 2% 0% 2%;
+                font-size: 1rem;
+            }
+            .entry {
+                font-size: 1.3rem;
+            }
+            .disco {
+                font-size: 1.3rem;
+            }
+            .item-title {
+                font-size: 1.2rem;
+            }
+            .item-title2 {
+                font-size: 0.9rem;
+            }
+            .item-title3 {
+                font-size: 0.7rem;
+            }
+            .moji {
+                width: 75%;
+                margin: 0px 10% 20px 10%;
+            }
+            .rogo {
+                width: 75%;
+                margin: 0px 10% 0px 10%;
+            }
+            iframe {
+                height: 100;
+            }
+            .senden {
+                height: 250px;
+            }
+        }
+        
+        @media screen and (max-width: 350px) {
+            iframe {
+                height: 100;
+            }
+        }
